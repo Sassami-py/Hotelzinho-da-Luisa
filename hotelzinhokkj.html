@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotelzinho da Luisa</title>
+    <link rel="stylesheet" href="visu.css">
+</head>
+<body>
+<nav>
+        <ul>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#avaliacao">Avaliações</a></li>
+            <li><a href="#instagram">Instagram</a></li>
+	    <li><a href="#orcamento">Orçamentos</a></li>
+
+        </ul>
+    </nav>
+   <header>
+    <img src="logo.png" alt="Hotelzinho da Luisa" id="logo">
+</header>
+
+    <section id="sobre">
+        <h2>🐾 SOBRE NÓS 🐾</h2>
+        <p>Olá, sou a Luisa, uma apaixonada por animais e estudante de veterinária. Criei este hotelzinho para cachorros com muito carinho e dedicação, com o objetivo de oferecer um lar temporário cheio de amor e cuidados para o seu pet enquanto você está fora. Além disso, este projeto me ajuda a financiar meus estudos e a realizar meu sonho de me tornar uma veterinária.</p>
+        <h3>🐶 NOSSOS SERVIÇOS 🐶</h3>
+        <ul>
+            <p><strong>HOSPEDAGEM CONFORTÁVEL:</strong> </p>
+<p>Seu cãozinho terá um espaço aconchegante e seguro para descansar e brincar.</p>
+<p>
+
+            <p><strong>ALIMENTAÇÃO BALANCEADA:</p>
+<p></strong> Oferecemos refeições saudáveis e adaptadas às necessidades de cada pet.</p>
+<p>
+
+            <p><strong>ATIVIDADES RECREATIVAS:</p>
+<p></strong> Passeios diários, brincadeiras e muito carinho para garantir que seu amigo se divirta e se sinta amado.</p>
+<p>
+
+            <p><strong>CUIDADOS VETERINÁRIOS:</p>
+<p></strong> Como estudante de veterinária, estou sempre atenta à saúde e bem-estar dos nossos hóspedes.</p>
+        <p>
+        <h3><center>🌟 POR QUE ESCOLHER O NOSSO HOTELZINHO? 🌟</center></h3>
+        <p><strong>AMBIENTE FAMILIAR:</p>
+<p></strong> Aqui, seu pet será tratado como parte da família.</p>
+<p>
+
+        <p><strong>ATENÇÃO PERSONALIZADA:</p>
+<p></strong> Cada cãozinho recebe cuidados especiais e atenção individual.</p>
+<p>
+
+        <p><strong>AMOR E DEDICAÇÃO:</strong></p>
+<p> Nossa paixão pelos animais é refletida em cada detalhe do nosso serviço.</p>
+    </section>
+
+
+  <section id="instagram">
+        <h2>📸Nosso Instagram📸</h2>
+        <div class="instagram-feed">
+            <iframe src="https://www.instagram.com/p/C_BYhlXPJ60/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+	    <iframe src="https://www.instagram.com/p/C-h-2JCusCx/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+	    <iframe src="https://www.instagram.com/p/C9f1QvPvjvw/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+	    <iframe src="https://www.instagram.com/p/C9SA3HPOrXN/embed" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+    </section>
+
+    <section id="avaliacao">
+        <h2>⭐Deixe sua Avaliação⭐</h2>
+        <div class="avaliacao-container">
+            <div id="estrelasSelecionadas">Nenhuma estrela selecionada</div>
+            <div id="estrelas">
+                <span class="estrela">☆</span>
+                <span class="estrela">☆</span>
+                <span class="estrela">☆</span>
+                <span class="estrela">☆</span>
+                <span class="estrela">☆</span>
+            </div>
+            <textarea id="comentario" placeholder="Deixe seu comentário..."></textarea>
+            <button id="submitAvaliacao">Enviar Avaliação</button>
+        </div>
+        <h3>Avaliações de Clientes</h3>
+        <div id="listaAvaliacoes"></div>
+    </section>
+
+ <section id="orcamento">
+  <h2>❤Faça um Orçamento❤</h2>
+        <form id="orcamentoForm">
+            <label for="quantidade">Quantidade de Cachorros:</label>
+            <input type="number" id="quantidade" name="quantidade" required>
+
+            <label for="tamanho">Tamanho dos Cachorros:</label>
+            <select id="tamanho" name="tamanho" required>
+                <option value="pequeno">Pequeno (60 reais/dia)</option>
+                <option value="medio">Médio (65 reais/dia)</option>
+                <option value="grande">Grande (70 reais/dia)</option>
+            </select>
+
+            <label for="dias">Quantidade de Dias:</label>
+            <input type="number" id="dias" name="dias" required>
+
+            <label for="data">Data de Início:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="nomesPets">Nome(s) dos Cachorros:</label>
+            <input type="text" id="nomesPets" name="nomesPets" required>
+
+            <button type="button" onclick="calcularOrcamento()">Calcular</button>
+        </form>
+
+        <p id="resultado"></p>
+
+        <button id="whatsappButton" style="display:none;" onclick="enviarWhatsApp()">Quero a Hospedagem</button>
+    </section>
+
+    <footer>
+        <p>Whatsapp: (61) 99317-7198 | instagram: @H0telzinh0_</p>
+    </footer>
+
+    <script src="funcao.js"></script>
+</body>
+</html>
