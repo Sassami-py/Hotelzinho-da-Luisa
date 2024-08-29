@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         estrelasSelecionadas.textContent = `${index + 1} estrela${index > 0 ? 's' : ''} selecionada${index > 0 ? 's' : ''}`;
     }
-
-    // Adiciona evento de mouseover e click nas estrelas
+
     estrelas.forEach((estrela, index) => {
         estrela.addEventListener('mouseover', () => {
             atualizarEstrelas(index);
@@ -32,14 +31,13 @@ document.addEventListener("DOMContentLoaded", function() {
             atualizarEstrelas(estrelasAtivas);
         });
     });
-
-    // Envia a avaliação por e-mail e exibe no site
+
     submitButton.addEventListener('click', function() {
         const avaliacao = estrelasAtivas + 1;
         const comentario = comentarioInput.value;
 
         if (avaliacao > 0 && comentario) {
-            const email = "esposa@example.com"; // Substitua com o e-mail da sua esposa
+            const email = "fenixxpoemasautorais@gmail.com"; // Substitua com o e-mail da sua esposa
             const assunto = encodeURIComponent("Nova Avaliação de Cliente");
             const corpo = encodeURIComponent(`Avaliação: ${avaliacao} estrelas\n\nComentário: ${comentario}`);
 
