@@ -1,12 +1,12 @@
 from datetime import datetime, date
 
-class periodo:
+class Periodo:
   def __init__(self, inicio, fim):
     dia_inicial = datetime.strptime(inicio,"%Y-%m-%d")
     dia_final = datetime.strptime(fim,"%Y-%m-%d")
     self.periodo_total = (dia_final - dia_inicial).days +1
 
-class calculadora:
+class Calculadora:
   def __init__(self, quantidade,servicos):
     precos = {
     'hospedagem': 65,
