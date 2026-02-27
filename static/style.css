@@ -1,0 +1,172 @@
+
+:root {
+    --principal: #ff9a9e;
+    --secundaria: #ff6b6b;
+    --fundo: #fdfbfb;
+    --texto: #444;
+    --sucesso: #25d366;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto);
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+nav {
+    background: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secundaria);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--principal);
+}
+
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo-principal {
+    max-width: 250px;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--principal);
+}
+
+.card h3 { color: var(--secundaria); margin-bottom: 10px; }
+.card p { font-size: 1.2rem; font-weight: bold; margin-bottom: 20px; }
+
+
+section {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+h2 { text-align: center; color: var(--secundaria); margin-bottom: 30px; }
+
+.form-backend {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label { font-weight: 600; font-size: 0.9rem; color: #666; }
+
+input, select {
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--principal);
+}
+
+button[type="submit"] {
+    background: var(--secundaria);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #ee5253;
+    transform: scale(1.02);
+}
+
+
+.resultado-balao {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff5f5;
+    border-left: 5px solid var(--secundaria);
+    border-radius: 15px;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.btn-zap {
+    display: inline-block;
+    background-color: var(--sucesso);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+@media (max-width: 600px) {
+    nav ul { gap: 15px; font-size: 0.9rem; }
+    section { margin: 20px; padding: 20px; }
+}
