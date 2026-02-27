@@ -10,7 +10,7 @@ def index():
 
 @app.route('/calcular', methods=['POST'])
 def calcular():
- 
+
     servico = request.form.get('servico')
     nome_cliente = request.form.get('nome_cliente')
     nomes_pets = request.form.get('nomes_pets')
@@ -23,9 +23,8 @@ def calcular():
         data_fim = data_ini
 
     per = Periodo(data_ini, data_fim)
-    
-    calc = Calculadora(quantidade, tipo_servico=servico)
-    total = calc.calcular_total(per)
+    calc = Calculadora(quantidade, servico) 
+    total = calc.calculo(per)               
 
     texto_base = (
         f"Olá! Gostaria de confirmar uma reserva:\n"
