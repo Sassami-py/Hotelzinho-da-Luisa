@@ -1,14 +1,15 @@
 import sqlite3
 
 def conectar():
-  conn = sqlite3.connect('hotelzinho.db')
-  conn.execute("PRAGMA foreign_keys = ON")
-  return conn
+    conn = sqlite3.connect('hotelzinho.db')
+    conn.execute("PRAGMA foreign_keys = ON")
+    return conn
 
 def criar_tabelas():
-  conn = conectar()
-  curcor = conn.cursor()
-  cursor.execute('''
+    conn = conectar()
+    cursor = conn.cursor() # Corrigido: era 'curcor'
+    
+    cursor.execute('''
         CREATE TABLE IF NOT EXISTS usuarios (
             id_usuario INTEGER PRIMARY KEY AUTOINCREMENT,
             nome_completo TEXT NOT NULL,
@@ -17,7 +18,8 @@ def criar_tabelas():
             telefone TEXT
         )
     ''')
-  cursor.execute('''
+    
+    cursor.execute('''
         CREATE TABLE IF NOT EXISTS caes (
             id_cao INTEGER PRIMARY KEY AUTOINCREMENT,
             id_dono INTEGER NOT NULL,
@@ -26,24 +28,25 @@ def criar_tabelas():
             FOREIGN KEY (id_dono) REFERENCES usuarios (id_usuario)
         )
     ''')
-  conn.commit()
-  conn.close()
+    
+    conn.commit()
+    conn.close()
 
-def cadastro(nome,email,senha,tel):
-  conn = conectar()
-  cursor = conn.cursor
-  try:
-    cursor.execute('''
+def cadastro(nome, email, senha, tel):
+    conn = conectar()
+    cursor = conn.cursor() # Corrigido: faltava o ()
+    try:
+        cursor.execute('''
             INSERT INTO usuarios (nome_completo, email, senha, telefone)
             VALUES (?, ?, ?, ?)
         ''', (nome, email, senha, tel))
         conn.commit()
-     return True
-  except sqlite3.IntegrityError:
-    print("Erro: Este e-mail já está cadastrado!")
+        return True
+    except sqlite3.IntegrityError:
+        print("Erro: Este e-mail já está cadastrado!")
         return False
     finally:
         conn.close()
 
 if __name__ == '__main__':
-  criar_tabelas()
+    criar_tabelas()
